@@ -1,0 +1,63 @@
+.is-paddingmore{
+    padding: 1rem;
+}
+
+.is-fixed{
+    flex: none;
+}
+
+.is-auto{
+    flex: auto;
+}
+
+.is-full-height{
+    height: 100%;
+}
+
+.is-border-top{
+    border-top: solid 1px $border;
+}
+
+.is-border-right{
+    border-right: solid 1px $border;
+}
+
+.is-border-bottom{
+    border-bottom: solid 1px $border;
+}
+
+.is-border-left{
+    border-left: solid 1px $border;
+}
+
+.is-block{
+    display: block;
+}
+
+.is-vertical-flex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.is-content-center{
+    display: flex;
+    align-items: center; 
+}
+
+.is-overflow-hidden{
+    overflow: hidden;
+}
+
+ul.menu-list{
+    li{
+        display: block;
+        a{
+            display: flex;
+            align-items: center;
+            span.icon{
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}

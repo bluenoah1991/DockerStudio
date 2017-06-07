@@ -1,0 +1,63 @@
+$docker-blue: #72d0eb;
+$primary: $docker-blue;
+
+@import "../../node_modules/bulma/bulma.sass";
+
+@import "addons.scss";
+@import "global.scss";
+@import "split.scss";
+
+.container-panel-left{
+    min-width: 200px;
+    overflow-x: auto;
+    a{
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .container-panel-left-toolbar{
+        border-bottom: solid 1px $border;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+.container-panel-right{
+    .container-panel-right-tabs{
+        margin-top: 1rem;
+        margin-bottom: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        ul{
+            padding: 0 1rem;
+        }
+    }
+    .table{
+        overflow-x: auto;
+        white-space: nowrap;
+        thead, tfoot{
+            th{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.prefix-server-icon{
+    padding-left: 25px !important;
+    background: url(../../app/images/icons/stack-100x100.png) no-repeat 5px center;
+    background-size: 16px 16px;
+}
+
+.prefix-container-icon{
+    padding-left: 25px !important;
+    background: url(../../app/images/icons/sandbox-100x100.png) no-repeat 5px center;
+    background-size: 16px 16px;
+}
+
+.hero-title-server{
+    padding-left: 100px;
+    background: url(../../app/images/icons/server-100x100.png) no-repeat 10px center;
+    background-size: 40px 40px;
+    padding: 15px 15px 15px 60px;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Docker Studio - The simplest docker management tools</title>
+    <link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <script src="vendors/zepto.min.js"></script>
+    <script src="dist/js/app.js"></script>
+  </head>
+  <body>
+    <div class="tabs is-centered is-marginless is-fixed">
+        <ul>
+            <li class="is-active">
+                <a>
+                    <span class="icon is-small"><i class="fa fa-cubes"></i></span>
+                    <span>Containers</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="icon is-small"><i class="fa fa-hdd-o"></i></span>
+                    <span>Images</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <span class="icon is-small"><i class="fa fa-gears"></i></span>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="columns is-marginless is-auto">
+        <div class="column is-paddingless container-panel-left" id="container-panel-left">
+            <div class="is-paddingmore container-panel-left-toolbar">
+                <a class="button is-link is-small">
+                    <span class="icon is-small">
+                        <i class="fa fa-link"></i>
+                    </span>
+                </a>
+                <a class="button is-link is-small">
+                    <span class="icon is-small">
+                        <i class="fa fa-chain-broken"></i>
+                    </span>
+                </a>
+                <a class="button is-link is-small">
+                    <span class="icon is-small">
+                        <i class="fa fa-plus"></i>
+                    </span>
+                </a>
+                <a class="button is-link is-small">
+                    <span class="icon is-small">
+                        <i class="fa fa-trash-o"></i>
+                    </span>
+                </a>
+                <a class="button is-link is-small">
+                    <span class="icon is-small">
+                        <i class="fa fa-refresh"></i>
+                    </span>
+                </a>
+                <a class="button is-link is-small">
+                    <span class="icon is-small">
+                        <i class="fa fa-gear"></i>
+                    </span>
+                </a>
+            </div>
+            <aside class="menu is-paddingmore">
+                <ul class="menu-list">
+                    <li><a class="prefix-server-icon">192.168.10.254</a></li>
+                    <li>
+                        <a class="prefix-server-icon">192.168.10.253</a>
+                        <ul>
+                            <li><a class="prefix-container-icon">nginx1nginx1nginx1nginx1nginx1nginx1nginx1nginx1nginx1</a></li>
+                            <li><a class="prefix-container-icon">apache2</a></li>
+                            <li><a class="prefix-container-icon">kafka1</a></li>
+                            <li><a class="prefix-container-icon">kafka2</a></li>
+                            <li><a class="prefix-container-icon">kafka3</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="prefix-server-icon">192.168.1.10</a></li>
+                    <li><a class="prefix-server-icon">192.168.1.11</a></li>
+                    <li><a class="prefix-server-icon">127.0.0.1</a></li>
+                </ul>
+            </aside>
+        </div>
+        <div class="column is-paddingless is-vertical-flex container-panel-right" id="container-panel-right">
+            <div class="tabs is-boxed is-fixed container-panel-right-tabs">
+                <ul>
+                    <li class="is-active">
+                    <a>
+                        <span class="prefix-server-icon">192.168.10.1</span>
+                        <span class="icon is-small"><i class="fa fa-times"></i></span>
+                    </a>
+                    </li>
+                    <li>
+                    <a>
+                        <span class="prefix-container-icon">nginx1</span>
+                        <span class="icon is-small"><i class="fa fa-times"></i></span>
+                    </a>
+                    </li>
+                    <li>
+                    <a>
+                        <span class="prefix-container-icon">apache2</span>
+                        <span class="icon is-small"><i class="fa fa-times"></i></span>
+                    </a>
+                    </li>
+                    <li>
+                    <a>
+                        <span class="prefix-container-icon">apache1</span>
+                        <span class="icon is-small"><i class="fa fa-times"></i></span>
+                    </a>
+                    </li>
+                </ul>
+            </div>
+            <div style="height: calc(100vh - 36px - 51px);" class="is-auto">
+                <h1 class="title is-marginless is-border-bottom hero-title-server">
+                    192.168.10.1
+                </h1>
+                <div class="columns is-marginless is-paddingless" id="container-panel-right-host-tab-top">
+                    <div class="column is-one-third is-border-right is-overflow-hidden">
+                        <table class="table is-narrow">
+                        <tbody>
+                            <tr>
+                                <th>OS</th>
+                                <td>Ubuntu 3.16.0-30-generic</td>
+                            </tr>
+                            <tr>
+                                <th>Memory</th>
+                                <td>1 GB</td>
+                            </tr>
+                            <tr>
+                                <th>CPU</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Hard Disk(IDE)</th>
+                                <td>50 GB</td>
+                            </tr>
+                            <tr>
+                                <th>Containers</th>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <th>Docker Engine</th>
+                                <td>1.6.2, build 7c8fca2</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <div class="column"></div>
+                </div>
+                <div id="container-panel-right-host-tab-bottom">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th>Container ID</th>
+                            <th>Image</th>
+                            <th>Command</th>
+                            <th>Created</th>
+                            <th>Status</th>
+                            <th>Ports</th>
+                            <th>Names</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                            <th>Container ID</th>
+                            <th>Image</th>
+                            <th>Command</th>
+                            <th>Created</th>
+                            <th>Status</th>
+                            <th>Ports</th>
+                            <th>Names</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                            <th>8078c48059da</th>
+                            <td><a href="javascript:;">91e:latest</a></td>
+                            <td>"/bin/bash"</td>
+                            <td>3 seconds ago</td>
+                            <td>Up 2 seconds</td>
+                            <td>0.0.0.0:8123->80/tcp</td>
+                            <td>container2</td>
+                            </tr>
+                            <tr>
+                            <th>3469f2d597aa</th>
+                            <td><a href="javascript:;">91e:latest</a></td>
+                            <td>"/bin/bash"</td>
+                            <td>38 seconds ago</td>
+                            <td>Up 36 seconds</td>
+                            <td></td>
+                            <td>container1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
